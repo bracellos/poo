@@ -1,6 +1,10 @@
 <?php
-require "Carro.php";
-require "Pessoa.php";
+
+// require "Carro.php";
+// require "Pessoa.php";
+
+require "Autoload.php";
+$load = new Autoload();
 
 $meuCarro = new Carro();
 $meuCarro->modelo = "Megane Grand Tour";
@@ -15,5 +19,5 @@ $outroCarro->getVeiculo();
 $meuCarro->getVeiculo();
 
 //classe pessoa
-$p1 = new Pessoa("Diego", 38);
+$p1 = new Pessoa    ("Diego", 38);
 $p1->getPessoa();

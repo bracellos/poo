@@ -1,4 +1,5 @@
 <?php
+// namespace Carro;
 class Carro {
     //atributos dos carros
     public $modelo;
