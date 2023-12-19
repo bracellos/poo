@@ -2,6 +2,7 @@
 use app\App;
 use app\hello\BemVindo;
 use app\hello\Hello;
+use app\logistica\Correios;
 use app\polimorfismo\aves\Ave;
 use app\polimorfismo\mamiferos\Mamifero;
 use app\polimorfismo\payments\mp\CheckoutPro;
@@ -47,3 +48,9 @@ echo $pagSeguro->payment;
 echo "<br>";
 
 $mp = new CheckoutPro();
+echo "<br>";
+
+$correio = new Correios('88311120', '89040312', 96, 45, 10);
+$correio->valorTotal();
+
+
