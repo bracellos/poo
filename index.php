@@ -2,6 +2,8 @@
 use app\App;
 use app\hello\BemVindo;
 use app\hello\Hello;
+use app\interfaces\Linha31;
+use app\interfaces\Mundial;
 use app\logistica\Correios;
 use app\polimorfismo\aves\Ave;
 use app\polimorfismo\mamiferos\Mamifero;
@@ -52,5 +54,16 @@ echo "<br>";
 
 $correio = new Correios('88311120', '89040312', 96, 45, 10);
 $correio->valorTotal();
+
+echo "<br>";
+
+$fluCampeao = new Mundial();
+$fluCampeao->tempo(7);
+$fluCampeao->apita();
+$fluCampeao->mostraCartao('Amarelo', 'Goleiro');
+
+echo "<br>";
+
+$linha = new Linha31("Fonte, Proeb, Rua dos Caçadores, Proeb, Fonte", '10:00', '11:15');
 
 
