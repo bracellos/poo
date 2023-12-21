@@ -5,6 +5,7 @@ use app\hello\Hello;
 use app\interfaces\Linha31;
 use app\interfaces\Mundial;
 use app\logistica\Correios;
+use app\pdo\Mysql;
 use app\polimorfismo\aves\Ave;
 use app\polimorfismo\mamiferos\Mamifero;
 use app\polimorfismo\payments\mp\CheckoutPro;
@@ -65,5 +66,18 @@ $fluCampeao->mostraCartao('Amarelo', 'Goleiro');
 echo "<br>";
 
 $linha = new Linha31("Fonte, Proeb, Rua dos Caçadores, Proeb, Fonte", '10:00', '11:15');
+
+echo "<p>PDO</P>";
+
+$g = new Mysql();
+$g->select("SELECT * FROM pdv_produtos");
+
+foreach($g->qrs as $dados){
+    echo $dados['nome']."<br>";
+}
+
+echo "inserir dados";
+
+$g->insert("INSERT INTO pdv_produtos (nome, descricao, valor_venda, valor_compra, unidade, cod_ean, ativo, from_categoria) VALUES ('Cachaça', 'Queima a guela', 4.5, 3.20, 'ML', '12321312312', 1, 5)");
 
 
